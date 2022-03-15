@@ -1,0 +1,81 @@
+{% extends "api/base.html" %}
+{% load static %}
+
+{% block title %}| Register{% endblock %}
+{% block body %}
+{% include 'api/navbar.html' %}
+<!-- <div class="container">
+<form action="{% url 'register'%}" method="POST">
+    {% csrf_token %}
+    <div class="row g-3">
+        <div class="col-md-6">
+            <label for="inputEmail4" class="form-label">Username</label>
+            <input type="text" class="form-control" name="username">
+        </div>
+    </div>
+    
+    <div class="row g-3">
+        <div class="col-md-3">
+        <label for="inputEmail4" class="form-label">First name</label>
+        <input type="text" class="form-control" name="first_name">
+        </div>
+        <div class="col-md-3">
+        <label for="inputEmail4" class="form-label">Last Name</label>
+        <input type="text" class="form-control" name="last_name">
+        </div>
+        </div>
+
+        <div class="row g-3">
+        <div class="col-md-3">
+            <label for="inputEmail4" class="form-label">Email</label>
+            <input type="email" class="form-control" name="email">
+            </div>
+            <div class="col-md-3">
+            <label for="inputPassword4" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password">
+            </div>
+        </div>
+        
+        <div class="row g-3">
+            <div class="col-6">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" name="address" placeholder="1234 Main St">
+            </div>
+        </div>
+        
+
+        <div class="row g-3">
+            <div class="col-md-3">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" name="city">
+              </div>
+              <div class="col-md-3">
+                <label for="inputState" class="form-label">State</label>
+                <input type="text" class="form-control" name="state">
+              </div>
+        </div>
+        
+        <div class="row g-3">
+            <div class="col-md-3">
+                <label for="inputZip" class="form-label">Zip</label>
+                <input type="text" class="form-control" name="zip_code">
+            </div>
+            <div class="col-md-3">
+                <label for="inputZip" class="form-label">Country</label>
+                <input type="text" class="form-control" name="country">
+            </div>
+        </div>
+        
+        <br>
+        <div class="col-3">
+          <button type="submit" class="btn btn-primary">Sign Up</button>
+        </div>
+</form>
+</div> -->
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign Up</button>
+</form>
+
+{% endblock %}

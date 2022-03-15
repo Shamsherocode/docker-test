@@ -1,0 +1,13 @@
+{% extends "api/base.html" %}
+{% load static %}
+
+{% block title %}| Login{% endblock %}
+{% block body %}
+{% include 'api/navbar.html' %}
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign In</button>
+</form>
+
+{% endblock %}
